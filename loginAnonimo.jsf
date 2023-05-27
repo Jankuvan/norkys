@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link type="text/css" rel="stylesheet" href="/sfeperu/javax.faces.resource/theme.css.jsf?ln=primefaces-redmond" /><link rel="stylesheet" media="screen" type="text/css" href="/sfeperu/javax.faces.resource/standard.css.jsf?ln=css" /><link rel="stylesheet" media="screen" type="text/css" href="/sfeperu/javax.faces.resource/primefaces.css.jsf?ln=primefaces&amp;v=3.0.1&amp;v=3.0.1" /><link rel="stylesheet" media="screen" type="text/css" href="/sfeperu/javax.faces.resource/layout/layout.css.jsf?ln=primefaces&amp;v=3.0.1&amp;v=3.0.1" /><script type="text/javascript" src="/sfeperu/javax.faces.resource/jquery/jquery.js.jsf?ln=primefaces&amp;v=3.0.1&amp;v=3.0.1"><!--
+
+//--></script><script type="text/javascript" src="/sfeperu/javax.faces.resource/primefaces.js.jsf?ln=primefaces&amp;v=3.0.1&amp;v=3.0.1"><!--
+
+//--></script><script type="text/javascript" src="/sfeperu/javax.faces.resource/layout/layout.js.jsf?ln=primefaces&amp;v=3.0.1&amp;v=3.0.1"><!--
+
+//--></script>
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+    <title></title><script type="text/javascript" src="/sfeperu/javax.faces.resource/calendar.js.jsf?ln=js"><!--
+
+//--></script><script type="text/javascript" src="/sfeperu/javax.faces.resource/jquery.selectboxes.js.jsf?ln=js"><!--
+
+//--></script>
+
+		<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../css/estilo-interno.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" media="all" href="../css/jScrollPane.css" />
+
+		<style type="text/css">
+body {
+	font-size: 10px;
+}
+
+#mnConfig span.ui-icon-triangle-1-s {
+	background-position: -192px -112px;
+}
+
+.ui-dialog-title {
+	float: left;
+	margin: 0.3em 16px 0.1em 0;
+	font-size: 13px;
+}
+
+.ui-dialog1 {
+	position: fixed !important;
+	top: 20% !important;
+	left: 20% !important;
+}
+
+.statusDialog {
+	z-index: 9000 !important;
+	visibility: visible;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+
+ul.ui-menu-list { /*width: 290px;*/
+	width: 100%;
+	position: static;
+}
+
+.ui-accordion .ui-accordion-content {
+	margin-top: -1px;
+	overflow: hidden;
+	padding: 0 3px 0 5px;
+}
+
+.ui-menu .ui-menuitem-link {
+	width: 96%;
+}
+
+.ui-menu-dynamic {
+	z-index: 2000 !important;
+}
+
+.ui-carousel-header .ui-carousel-header-title {
+	width: 50%;
+}
+
+#menuForm div.ui-menu {
+	width: 100%;
+	padding: 0.1px;
+}
+
+#center {
+	top: 34px !important;
+}
+
+#left {
+	top: 35px !important;
+}
+
+.ui-toolbar {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.gridContent .ui-panel-content {
+	text-align: left;
+}
+
+#roles div.ui-tabs-panels {
+	height: 5px;
+	padding: 0px;
+}
+
+.ui-state-disabled {
+	background-image: none;
+	opacity: 0.9 !important;
+	-moz-opacity: 0.9 !important;
+	filter: alpha(opacity =               90) !important;
+}
+</style></head><body>
+
+		<script type="text/javascript"><!--
+
+				jQuery(document).ready(function($) {
+					$("#fechaEmision_input").css({
+						'width' : '55%'
+					});
+				});
+			
+//--></script>
+
+		<script type="text/javascript"><!--
+
+				$(".numero").live('keydown', function(e) {
+					if (e.shiftKey || e.altKey || e.keyCode == 18) {
+						e.preventDefault();
+						return;
+					}
+
+					switch (e.keyCode) {
+					case 48: //0
+					case 49: //1
+					case 50: //2
+					case 51: //3
+					case 52: //4
+					case 53: //5
+					case 54: //6
+					case 55: //7
+					case 56: //8
+					case 57: //9
+					case 37: //left
+					case 39: //right
+					case 8: //tab
+					case 13: //return
+					case 46: //del
+					case 110: //.
+
+					case 96: //0
+					case 97: //1
+					case 98: //2
+					case 99: //3
+					case 100: //4
+					case 101: //5
+					case 102: //6
+					case 103: //7
+					case 104: //8
+					case 105: //9
+					case 190: //.
+						return;
+					}
+					e.preventDefault();
+				});
+			
+//--></script><span id="growl"></span><script id="growl_s" type="text/javascript"><!--
+$(function(){PrimeFaces.cw('Growl','widget_growl',{id:'growl',msgs:[]});});
+//--></script><form id="loginForm" name="loginForm" method="post" action="/sfeperu/public/loginAnonimo.jsf" enctype="application/x-www-form-urlencoded"><script id="j_id1179677218_46507294_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Layout','widget_j_id1179677218_46507294',{id:'j_id1179677218_46507294',full:true,center:{paneSelector:'#top',size:'140',resizable:false,closable:false}},'layout');});
+//--></script><div id="top" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center"><div class="ui-layout-unit-content ui-widget-content">
+					<div id="todo">
+						<div id="cuerpo-index">
+							<div id="logo">
+								<a href="http://www.bizlinks.com.pe/"><img id="j_id1179677218_465072c8" src="/sfeperu/images/loginImg/logo_Bizlinks_v2.png" alt="" style="width:180px;" /></a>
+							</div>
+							<div class="login"></div>
+							<div id="menu-dos">
+
+								<h1 align="right">Factura Electrónica - Login Anónimo</h1>
+							</div>
+
+							<div id="banner">
+								<div class="redes">
+									<div align="center">
+										<a href="https://www.facebook.com/pages/Bizlinks-Latin-America/537002013078899" target="_blank"><img id="j_id1179677218_465072d5" src="/sfeperu/images/facebook.jpg" alt="" width="20" height="20" /></a><a href="https://twitter.com/Bizlinks1" target="_blank"><img id="j_id1179677218_46507326" src="/sfeperu/images/twitter.jpg" alt="" width="20" height="20" /></a><a href="https://www.linkedin.com/company/bizlinks-latin-america?trk=top_nav_home" target="_blank"><img id="j_id1179677218_46507333" src="/sfeperu/images/linkledn.jpg" alt="" width="20" height="20" /></a>
+									</div>
+								</div>
+							</div>
+							<div id="sidebar">
+								<ul>
+									<li></li>
+									<li>
+										<!--                                     <p:graphicImage value="/images/facturaelectronica.gif" width="147" height="237"/> -->
+									</li>
+								</ul>
+							</div>
+							<div id="texto">
+								<div class="top">
+									<h3>
+										<a href="http://www.bizlinks.com.pe/" target="_blank">Inicio</a>
+										&gt;
+									</h3>
+									<p></p>
+									<p></p>
+									<p></p>
+									<p></p>
+									<p></p>
+									<div></div>
+								</div>
+
+								<div class="testimonio-cliente">
+									<table border="0" width="55%">
+										<tr>
+											<td>
+												<table border="0" width="100%">
+													<tr>
+														<td colspan="2"><b>Datos del Comprobante</b></td>
+													</tr>
+													<tr>
+														<td height="20"></td>
+													</tr>
+													<tr>
+														<td valign="top" width="30%">
+															<p>
+																<label>Tipo Documento</label>
+															</p>
+														</td>
+														<td width="35%"><div id="Documento" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all ui-helper-clearfix" style="width:150px; font-family:verdana; font-size: 10px;"><div class="ui-helper-hidden-accessible"><select id="Documento_input" name="Documento_input" onchange="submit()" style="width:150px; font-family:verdana; font-size: 10px;"><option value="">Seleccionar</option><option value="01">Factura</option><option value="03">Boleta de Venta</option><option value="07">Nota de crédito</option><option value="08">Nota de débito</option><option value="20">Comprobante de Retención</option><option value="40">Comprobante de Percepción</option><option value="30">Adq. de Comercios</option><option value="42">Adq. de Tarjetas Propias</option><option value="34">Operador</option></select></div><a href="#" class="ui-selectonemenu-label-container"><label class="ui-selectonemenu-label ui-corner-all">&nbsp;</label></a><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s"></span></div><div id="Documento_panel" class="ui-selectonemenu-panel ui-widget-content ui-corner-all ui-helper-hidden"><ul class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Seleccionar</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Factura</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Boleta de Venta</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Nota de crédito</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Nota de débito</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Comprobante de Retención</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Comprobante de Percepción</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Adq. de Comercios</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Adq. de Tarjetas Propias</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all">Operador</li></ul></div></div><script id="Documento_s" type="text/javascript"><!--
+$(function(){PrimeFaces.cw('SelectOneMenu','widget_Documento',{id:'Documento',effect:'blind',behaviors:{change:function(event) {PrimeFaces.ab({source:'Documento',process:'Documento',update:'lblMontoImporteTotal montoImporteTotal',event:'valueChange'}, arguments[1]);}}});});
+//--></script></td>
+													</tr>
+													<tr>
+														<td height="2" width="20%"></td>
+														<td height="2"></td>
+													</tr>
+													<tr>
+														<td><label>Serie - Número</label></td>
+														<td width="35%"><input id="nuSerieNumero" name="nuSerieNumero" type="text" value="" maxlength="13" size="19" style="border:1px solid #C5DBEC; height: 18px; width:151px;" /></td>
+													</tr>
+													<tr>
+														<td colspan="2" height="5"></td>
+													</tr>
+													<tr>
+														<td><label><span id="lblMontoImporteTotal">Monto Total</span>
+														</label></td>
+														<td width="35%"><input id="montoImporteTotal" name="montoImporteTotal" type="text" value="" maxlength="20" size="27" style="border:1px solid #C5DBEC; height: 18px; width:151px;" class="numero" /></td>
+													</tr>
+													<tr>
+														<td colspan="2" height="5"></td>
+													</tr>
+													<tr>
+														<td><label>Fecha Emisión
+														</label></td>
+														<td width="35%"><span id="fechaEmision" style="width:90%"><input id="fechaEmision_input" name="fechaEmision_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" size="13" readonly="readonly" /></span><script id="fechaEmision_s" type="text/javascript"><!--
+$(function(){PrimeFaces.cw('Calendar','widget_fechaEmision',{id:'fechaEmision',popup:true,locale:'es',dateFormat:'dd/mm/yy'});});
+//--></script></td>
+													</tr>
+													<tr>
+														<td colspan="2" height="5"></td>
+													</tr>
+
+													<tr>
+														<td><label>R.U.C. Emisor
+														</label></td>
+														<td width="35%"><input id="nuTributarioEmisor" name="nuTributarioEmisor" type="text" value="" maxlength="11" size="27" style="border:1px solid #C5DBEC; height: 18px; width:151px;" class="numero" /></td>
+													</tr>
+													<tr>
+														<td colspan="2" height="10"></td>
+													</tr>
+												</table>
+												<table border="0" width="75%">
+													<tr>
+														<td colspan="2" align="center"><button id="j_id1179677218_465073c3" name="j_id1179677218_465073c3" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({formId:'loginForm',source:'j_id1179677218_465073c3',process:'@all',update:'dlgVerDetalle growl dlgMessageErrors',onstart:function(){statusDialog.show();;},onsuccess:function(data, status, xhr){statusDialog.hide();;}});return false;" type="submit"><span class="ui-button-text">Consultar</span></button><script id="j_id1179677218_465073c3_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_465073c3',{id:'j_id1179677218_465073c3'});
+//--></script></td>
+														<td colspan="2" align="center"><button id="j_id1179677218_465073d9" name="j_id1179677218_465073d9" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="reset"><span class="ui-button-text">Limpiar</span></button><script id="j_id1179677218_465073d9_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_465073d9',{id:'j_id1179677218_465073d9'});
+//--></script>  </td>
+														<td colspan="2" align="center"><input type="button" value="Regresar" onclick="window.location='/sfeperu/login.jsf';" class="botonSimil" style="padding: 5px 13px 7px 13px; color: #2E6E9E; border: 1px solid #C5DBEC; font-weight: bold;" />
+														</td>
+													</tr>
+
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td height="20"></td>
+										</tr>
+										<tr>
+
+											<td>
+												<div aria-live="polite" style="width:255px;border-radius: 5px;" class="ui-message ui-staticmessage ui-message-info ui-widget ui-corner-all">
+													<span class="ui-message-info-icon"></span>
+													<span class="ui-message-info-summary">IMPORTANTE</span><br />
+													<span class="ui-message-info-detail">El CDR del OSE BIZLINKS tiene validez LEGAL para cualquier tipo de trámite. Más información: <a href="http://www.sunat.gob.pe/mensajes/julio/2019/aviso-ti-180719.html" style="cursor: pointer;font-weight:bold;">Click Aquí.</a></span>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="copy" align="left" style="width: 60%;">© 2014
+								Bizlinks todos los derechos reservados.</div>
+						</div>
+					</div></div></div><input type="hidden" name="loginForm_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="BDZtLYN6rWzeMkFT9oIWLJJHqf6ckX8+84v8E7Om2BHWcX8pAz77S6c+tCVe/mvuwBdJQl5qo4Vidvs25uSSCaSBlpsxFOM9PcjI4Otkpe7UZw3cwN9L4KDX5+q6EASBoJRQv36IJrDwsVnnNRe7Y9dC3oY=" /></form><script id="dlgVerDetalle_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Dialog','dlgVerDetalle',{id:'dlgVerDetalle',modal:true,behaviors:{close:function(event) {PrimeFaces.ab({source:'dlgVerDetalle',process:'dlgVerDetalle',update:'grid detailForm',event:'close'}, arguments[1]);}}});});
+//--></script><div id="dlgVerDetalle" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix"><span class="ui-dialog-title">Detalle del Comprobante</span></div><div class="ui-dialog-content ui-widget-content"><div id="j_id1179677218_4650701e" class="ui-scrollpanel ui-scrollpanel-native ui-widget ui-widget-content ui-corner-all" style="width:850px;height:500px;border:0px"><body><form id="downloadForm" name="downloadForm" method="post" action="/sfeperu/public/loginAnonimo.jsf" enctype="application/x-www-form-urlencoded"><div id="j_id1179677218_465070a8" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="j_id1179677218_465070a8_content" class="ui-panel-content ui-widget-content"><table class="dialog"><tbody>
+<tr><td><label class="columnaCabeceraAuditoria">Publicado el:</label></td><td><label></label></td><td><label class="columnaCabeceraAuditoria">por usuario:</label></td><td><label> </label></td><td><label class="columnaCabeceraAuditoria"> | Último estado : </label></td><td><label></label></td><td><label class="columnaCabeceraAuditoria">- Modificado el :</label></td><td><label></label></td><td><label class="columnaCabeceraAuditoria">por usuario:</label></td><td><label> </label></td><td></td></tr>
+</tbody>
+</table></div></div><script id="j_id1179677218_465070a8_s" type="text/javascript"><!--
+PrimeFaces.cw('Panel','widget_j_id1179677218_465070a8',{id:'j_id1179677218_465070a8'});
+//--></script><div id="j_id1179677218_46507156" class="ui-toolbar ui-widget ui-widget-header ui-corner-all ui-helper-clearfix ebiz-toolbar"><div class="ui-toolbar-group-left"><button id="j_id1179677218_4650718a" name="j_id1179677218_4650718a" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({formId:'downloadForm',source:'j_id1179677218_4650718a',process:'@all',update:'Documento nuSerieNumero montoImporteTotal fechaEmision nuTributarioEmisor'});return false;" type="submit"><span class="ui-button-text">Cerrar</span></button><script id="j_id1179677218_4650718a_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_4650718a',{id:'j_id1179677218_4650718a'});
+//--></script></div><div class="ui-toolbar-group-right"><button id="btnDescargarPdfProveedor" name="btnDescargarPdfProveedor" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({formId:'downloadForm',source:'btnDescargarPdfProveedor',process:'@all',onstart:function(){statusDialog.show();;},onsuccess:function(data, status, xhr){statusDialog.hide();;},oncomplete:function(xhr, status, args){handleCompleteImprimir(xhr, status, args);}});return false;" type="submit"><span class="ui-button-text">Descargar PDF</span></button><script id="btnDescargarPdfProveedor_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_btnDescargarPdfProveedor',{id:'btnDescargarPdfProveedor'});
+//--></script><script type="text/javascript" src="/sfeperu/javax.faces.resource/oamSubmit.js.jsf?ln=org.apache.myfaces"><!--
+
+//--></script><a href="#" onclick="return myfaces.oam.submitForm('downloadForm','descargarPDF','_self',[]);" id="descargarPDF" target="_self"></a>
+								<script type="text/javascript"><!--
+
+									function handleCompleteImprimir(xhr,
+											status, args) {
+										if ((args.seleccionado)) {
+											$("#descargarPDF").click();
+										}
+									}
+								
+//--></script><button id="btnDescargarXML" name="btnDescargarXML" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({formId:'downloadForm',source:'btnDescargarXML',process:'@all',onstart:function(){statusDialog.show();;},onsuccess:function(data, status, xhr){statusDialog.hide();;},oncomplete:function(xhr, status, args){handleCompleteDescargar(xhr, status, args);},params:{'tipo':'xml'}});return false;" type="submit"><span class="ui-button-text">Descargar XML</span></button><script id="btnDescargarXML_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_btnDescargarXML',{id:'btnDescargarXML'});
+//--></script><button id="btnDescargarCDR" name="btnDescargarCDR" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({formId:'downloadForm',source:'btnDescargarCDR',process:'@all',onstart:function(){statusDialog.show();;},onsuccess:function(data, status, xhr){statusDialog.hide();;},oncomplete:function(xhr, status, args){handleCompleteDescargar(xhr, status, args);},params:{'tipo':'cdr'}});return false;" type="submit"><span class="ui-button-text">Descargar CDR</span></button><script id="btnDescargarCDR_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_btnDescargarCDR',{id:'btnDescargarCDR'});
+//--></script><a href="#" onclick="return myfaces.oam.submitForm('downloadForm','descargarZip','_self',[]);" id="descargarZip" target="_self"></a>
+								<script type="text/javascript"><!--
+
+									function handleCompleteDescargar(xhr,
+											status, args) {
+										if ((args.seleccionado)) {
+											$("#descargarZip").click();
+										}
+									}
+								
+//--></script><input id="j_id1179677218_4650765a" name="j_id1179677218_4650765a" type="submit" value="Imprimir Documento" onclick="var cf = function(){this.form.target='_blank'};var oamSF = function(){};return (cf.apply(this, [])==false)? false : oamSF.apply(this, []); " style="padding: 6px 3px 5px 3px; color: #2E6E9E; border: 1px solid #C5DBEC; font-weight: bold; background: #dfeffc;" /></div></div><div id="pnlContenedorXML" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:99%;"><div id="pnlContenedorXML_header" class="ui-panel-titlebar ui-widget-header ui-corner-all"><span class="ui-panel-title">Datos del Comprobante</span></div><div id="pnlContenedorXML_content" class="ui-panel-content ui-widget-content">
+
+							<object type="application/pdf" data="" height="600px" width="820px"></object></div></div><script id="pnlContenedorXML_s" type="text/javascript"><!--
+PrimeFaces.cw('Panel','widget_pnlContenedorXML',{id:'pnlContenedorXML'});
+//--></script><script id="j_id1179677218_46507740_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Dialog','verDetalleError',{id:'j_id1179677218_46507740',resizable:false,modal:true,width:250,appendToBody:true,showEffect:'fade'});});
+//--></script><div id="j_id1179677218_46507740" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix"><span class="ui-dialog-title">Información</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><table class="dialog"><tbody>
+<tr><td class="col1">Hubo un error en la exportación del detalle.</td></tr>
+<tr><td class="col1">
+								<br />
+								<br /></td></tr>
+</tbody>
+</table><button id="j_id1179677218_46507781" name="j_id1179677218_46507781" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="verDetalleError.hide();" type="button"><span class="ui-button-text">Aceptar</span></button><script id="j_id1179677218_46507781_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_46507781',{id:'j_id1179677218_46507781'});
+//--></script></div></div><input type="hidden" name="downloadForm_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="BDZtLYN6rWzeMkFT9oIWLJJHqf6ckX8+84v8E7Om2BHWcX8pAz77S6c+tCVe/mvuwBdJQl5qo4Vidvs25uSSCaSBlpsxFOM9PcjI4Otkpe7UZw3cwN9L4KDX5+q6EASBoJRQv36IJrDwsVnnNRe7Y9dC3oY=" /></form></body></div></div></div><script id="dlgMessageErrors_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Dialog','dlgMessageErrors',{id:'dlgMessageErrors',resizable:false,modal:true,width:250,appendToBody:true,showEffect:'fade'});});
+//--></script><div id="dlgMessageErrors" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix"><span class="ui-dialog-title">Información</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><table id="pnlMessageErrors" class="dialog"><tbody>
+<tr><td class="col1"></td></tr>
+</tbody>
+</table>
+			<br /><button id="j_id1179677218_465077d3" name="j_id1179677218_465077d3" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="dlgMessageErrors.hide();" type="button"><span class="ui-button-text">Aceptar</span></button><script id="j_id1179677218_465077d3_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_465077d3',{id:'j_id1179677218_465077d3'});
+//--></script></div></div><script id="dlgCdrNoDisponible_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Dialog','dlgCdrNoDisponible',{id:'dlgCdrNoDisponible',resizable:false,modal:true,width:250,appendToBody:true,showEffect:'fade'});});
+//--></script><div id="dlgCdrNoDisponible" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix"><span class="ui-dialog-title">Información</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><table id="pnlCdrNoDisponible" class="dialog"><tbody>
+<tr><td class="col1">El documento no cuenta con CDR.</td></tr>
+</tbody>
+</table>
+			<br /><button id="j_id1179677218_4650741d" name="j_id1179677218_4650741d" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="dlgCdrNoDisponible.hide();" type="button"><span class="ui-button-text">Aceptar</span></button><script id="j_id1179677218_4650741d_s" type="text/javascript"><!--
+PrimeFaces.cw('CommandButton','widget_j_id1179677218_4650741d',{id:'j_id1179677218_4650741d'});
+//--></script></div></div></body><div id="center" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center" style="top:40px"><div class="ui-layout-unit-content ui-widget-content"><script id="j_id1179677218_46507451_s" type="text/javascript"><!--
+$(function() {PrimeFaces.cw('Dialog','statusDialog',{id:'j_id1179677218_46507451',draggable:false,resizable:false,modal:true,appendToBody:true,position:'center'});});
+//--></script><div id="j_id1179677218_46507451" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-hidden-container"><div class="ui-dialog-content ui-widget-content"><img id="j_id1179677218_465074af" src="../resources/images/ajaxloadingbar.gif" alt="" /></div></div></div></div>
+
+</html>
